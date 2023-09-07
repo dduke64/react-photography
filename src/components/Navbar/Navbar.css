@@ -1,0 +1,13 @@
+.links-container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.link-item {
+    margin: 0 1rem
+}
+
+.navbar-container {
+    margin: 2rem 0
+}
