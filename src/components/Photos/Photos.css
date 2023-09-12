@@ -1,0 +1,9 @@
+.photo-container {
+    width: 32%;
+}
+
+.photos {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
