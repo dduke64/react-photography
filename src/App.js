@@ -6,15 +6,25 @@ import Photos from './components/Photos/Photos';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
 import Engineering from './components/Engineering/Engineering';
+import { getData } from './siteData'
 
 function App() {
+
+
+  function handleData() {
+    getData().then(data => {
+    })
+  }
+
+  handleData();
+
     return (
         <Router>
             <Navbar />
             <div className='page-wrapper'>
             <Routes>
-              <Route path='/' element={ <Home />} />
-              <Route path='/contact' element={<Contact />} />
+              <Route path='/' element={ <Home/>} />
+              <Route path='/contact' element={<Contact/>} />
               <Route path='/about' element={<About />} />
               <Route path='/photos' element={<Photos />} />
               <Route path='/engineering' element={<Engineering />} />
@@ -22,7 +32,5 @@ function App() {
             </div>
         </Router>
     );
-  }
-
-
+}
 export default App;

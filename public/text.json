@@ -1,0 +1,22 @@
+{
+    "About" : {
+        "title": "About",
+        "intro": "This is my about section which covers a brief overview of myself"
+    }, 
+    "Contact": {
+        "title": "Contact",
+        "intro": "here will be a form with stuff"
+    }, 
+    "Engineering": {
+        "title": "Engineering",
+        "intro": "This page is to describe my work as a software engineer and provide my resume"
+    },
+    "Home": {
+        "title": "Home",
+        "intro": "Welcome to my website"
+    }, 
+    "Photos":{
+        "title": "Photos",
+        "intro": "Here is a collection of my photography work"
+    }
+}

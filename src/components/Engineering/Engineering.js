@@ -1,4 +1,5 @@
 import React from 'react';
+import './Engineering.css'
 const Engineering = () => {
     return (
         <div>
@@ -6,11 +7,12 @@ const Engineering = () => {
           <p className='page-intro'>
 This page is to describe my work as a software engineer and provide my resume
 
-Maybe embed my resume here as a pdf inside a viewer?
 </p>
-<object data="../../staticResources/aug-23-enrich.pdf" type="application/pdf" width="100%" height="100%">
-      <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
-  </object>
+<div className='resume-container'>
+<iframe src="https://personalwebsitephotos.blob.core.windows.net/data/aug-23-enrich.pdf" type="application/pdf" width="100%" height="100%">
+      <p>Alternative text - include a link <a href="https://personalwebsitephotos.blob.core.windows.net/data/aug-23-enrich.pdf">to the PDF!</a></p>
+  </iframe>
+  </div>
         </div>
     );
   }

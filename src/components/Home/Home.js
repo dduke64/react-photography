@@ -1,14 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import { getData } from '../../siteData'
 
-const Home = () => {
+
+function Home() {
+  const [stateData, setStateData] = useState();
+
+
+  useEffect(() => {
+    getData().then(data => {
+      setStateData(data)
+      })
+  },[]);
+
+
+
     return (
         <div>
-          <h2 className='page-header'>Home</h2>
-
-          <p className='page-intro'>
-        Welcome to my website
-        </p>
+          <h2 className='page-header'>{stateData?.Home.title}</h2>
+          <p className='page-intro'>{stateData?.Home.intro}</p>
         </div>
     );
   }
