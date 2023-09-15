@@ -1,15 +1,16 @@
 {
     "About" : {
         "title": "About",
-        "intro": "This is my about section which covers a brief overview of myself"
+        "intro": "Welcome!"
     }, 
     "Contact": {
         "title": "Contact",
-        "intro": "here will be a form with stuff"
+        "intro": "If you would like to contact me about my photography or anything else, fill out the form below and I will follow up with you shortly. You can also reach me on Instagram, LinkedIn, or Facebook from the links in the About section of this site."
     }, 
     "Engineering": {
         "title": "Web Development",
-        "intro": "This page is to describe my work as a software engineer and provide my resume"
+        "intro": "This page is to describe my work as a software engineer and provide my resume",
+        "overview": "I graduated from Georgia Institute of Technology in 2021 with a bachelors degree in Computer Science. After that I began working fulltime at Publicis Sapient, which is a digital consultation firm that primarily focuses on building out client's online presences. I enjoy front end development and learning the various technologies that go into it."
     },
     "Home": {
         "title": "Home",

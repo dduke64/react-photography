@@ -2,11 +2,18 @@
     border: 2px solid red;
     width: 100%;
     padding: 1rem;
-    margin: 1rem
+    margin: 1rem;
 }
-
 .photo:hover {
     border: 2px solid blue;
+
+}
+img {
+    transition: all 0.5s;
+
+}
+img:hover {
+    transform: scale(1.1);
     opacity: .7;
 
 }
