@@ -1,21 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './Engineering.css'
-import {getData} from '../../siteData'
 
 
-function Engineering() {
-
-  const [labels, setlabels] = useState();
-    useEffect(() => {
-      getData().then(data => {
-        setlabels(data)
-        })
-    },[]);
+function Engineering({labels}) {
 
     return (
       <div>
-        <h2 className='page-header'>{labels?.Engineering.title}</h2>
-        <p className='page-intro'>{labels?.Engineering.intro}</p>
+        <h2 className='page-header'>{labels?.Engineering?.title}</h2>
+        <p className='page-intro'>{labels?.Engineering?.intro}</p>
         <div className='resume-container'>
           <iframe 
             title="My Software Engineering Resume" 

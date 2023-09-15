@@ -1,16 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import '../../App.css'
-import {getData} from '../../siteData'
 
 
-function About() {
+function About({labels}) {
 
-  const [labels, setlabels] = useState();
-  useEffect(() => {
-    getData().then(data => {
-      setlabels(data)
-      })
-  },[]);
 
     return (
         <div>

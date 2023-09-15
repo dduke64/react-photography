@@ -1,4 +1,5 @@
 
+
 export const getData = () => 
    fetch('https://personalwebsitephotos.blob.core.windows.net/data/text.json'
   ,{
@@ -11,3 +12,4 @@ export const getData = () =>
     .then(function(response){
         return response.json();
     })
+    

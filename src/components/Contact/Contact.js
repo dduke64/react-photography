@@ -1,15 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {getData} from '../../siteData'
+import React from 'react';
 
 
-function Contact (data) {
+function Contact ({labels}) {
 
-  const [labels, setlabels] = useState();
-  useEffect(() => {
-    getData().then(data => {
-      setlabels(data)
-      })
-  },[]);
 
     return (
         <div>

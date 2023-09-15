@@ -1,15 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import { getData } from '../../siteData'
+import React from 'react';
 
 
-function Home() {
-
-  const [labels, setlabels] = useState();
-  useEffect(() => {
-    getData().then(data => {
-      setlabels(data)
-      })
-  },[]);
+function Home({labels}) {
 
     return (
         <div>
