@@ -1,5 +1,6 @@
 .photo-container {
-    width: 32%;
+    width: 30%;
+    display: flex;
 }
 
 .photos {
