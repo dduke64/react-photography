@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {getData} from '../../siteData'
+
 
 function Contact (data) {
+
+  const [labels, setlabels] = useState();
+  useEffect(() => {
+    getData().then(data => {
+      setlabels(data)
+      })
+  },[]);
+
     return (
         <div>
-          <h2 className='page-header'>Contact</h2>
+          <h2 className='page-header'>{labels?.Contact.title}</h2>
           <form>
             <p className='page-intro'>
-            here will be a form with stuff
+            {labels?.Contact.intro}
             </p>
           </form>
         </div>

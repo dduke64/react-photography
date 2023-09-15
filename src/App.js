@@ -6,18 +6,8 @@ import Photos from './components/Photos/Photos';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
 import Engineering from './components/Engineering/Engineering';
-import { getData } from './siteData'
 
 function App() {
-
-
-  function handleData() {
-    getData().then(data => {
-    })
-  }
-
-  handleData();
-
     return (
         <Router>
             <Navbar />

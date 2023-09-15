@@ -3,21 +3,18 @@ import { getData } from '../../siteData'
 
 
 function Home() {
-  const [stateData, setStateData] = useState();
 
-
+  const [labels, setlabels] = useState();
   useEffect(() => {
     getData().then(data => {
-      setStateData(data)
+      setlabels(data)
       })
   },[]);
 
-
-
     return (
         <div>
-          <h2 className='page-header'>{stateData?.Home.title}</h2>
-          <p className='page-intro'>{stateData?.Home.intro}</p>
+          <h2 className='page-header'>{labels?.Home.title}</h2>
+          <p className='page-intro'>{labels?.Home.intro}</p>
         </div>
     );
   }

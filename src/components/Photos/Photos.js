@@ -1,16 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import PhotoContainer from '../PhotoContainer/PhotoContainer';
 import './Photos.css';
+import {getData} from '../../siteData'
+
 
 function handleClick() {
   console.log("photo was clicked")
 }
 
-const Photos = () => {
+function Photos() {
+
+  const [labels, setlabels] = useState();
+  useEffect(() => {
+    getData().then(data => {
+      setlabels(data)
+      })
+  },[]);
+
+  
     return (
         <div>
-          <h2 className='page-header'>Photos</h2>
-          <p className='page-intro'>Here is a collection of my photography work</p>
+          <h2 className='page-header'>{labels?.Photos.title}</h2>
+          <p className='page-intro'>{labels?.Photos.intro}</p>
           <div className='photos'>
           <div className='photo-container' onClick={handleClick}>
             <PhotoContainer />
