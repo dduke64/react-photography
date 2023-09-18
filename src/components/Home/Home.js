@@ -1,12 +1,15 @@
 import React from 'react';
+import { useMyContext } from '../../utils/context';
 
 
-function Home({labels}) {
+function Home() {
+
+  const { data } = useMyContext();
 
     return (
         <div>
-          <h2 className='page-header'>{labels?.Home.title}</h2>
-          <p className='page-intro'>{labels?.Home.intro}</p>
+          <h2 className='page-header'>{data?.Home.title}</h2>
+          <p className='page-intro'>{data?.Home.intro}</p>
         </div>
     );
   }

@@ -1,13 +1,18 @@
 import React from 'react';
 import './Engineering.css'
+import { useMyContext } from '../../utils/context';
 
 
-function Engineering({labels}) {
+
+function Engineering() {
+
+
+  const { data } = useMyContext();
 
     return (
       <div>
-        <h2 className='page-header'>{labels?.Engineering?.title}</h2>
-        <p className='page-intro'>{labels?.Engineering?.intro}</p>
+        <h2 className='page-header'>{data?.Engineering?.title}</h2>
+        <p className='page-intro'>{data?.Engineering?.intro}</p>
         <div className='resume-container'>
           <iframe 
             title="My Software Engineering Resume" 

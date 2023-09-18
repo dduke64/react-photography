@@ -1,15 +1,19 @@
 import React from 'react';
+import { useMyContext } from '../../utils/context';
 
 
-function Contact ({labels}) {
+
+function Contact () {
+
+  const { data } = useMyContext();
 
 
     return (
         <div>
-          <h2 className='page-header'>{labels?.Contact.title}</h2>
+          <h2 className='page-header'>{data?.Contact.title}</h2>
           <form>
             <p className='page-intro'>
-            {labels?.Contact.intro}
+            {data?.Contact.intro}
             </p>
           </form>
         </div>
