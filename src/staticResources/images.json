@@ -1,0 +1,27 @@
+{
+    "image1" : {
+        "src": "https://personalwebsitephotos.blob.core.windows.net/photos/grad_selfie.jpg",
+        "alt" : "alt text"
+    },
+    "image2" : {
+        "src": "https://personalwebsitephotos.blob.core.windows.net/photos/pic1.jpeg",
+        "alt" : "alt text"
+    },
+    "image3" : {
+        "src": "https://personalwebsitephotos.blob.core.windows.net/photos/pic2.webp",
+        "alt" : "alt text"
+    },
+    "image4" : {
+        "src": "https://personalwebsitephotos.blob.core.windows.net/photos/pic3.jpeg",
+        "alt" : "alt text"
+    },
+    "image5" : {
+        "src": "https://personalwebsitephotos.blob.core.windows.net/photos/grad_selfie.jpg",
+        "alt" : "alt text"
+    },
+    "image6" : {
+        "src": "https://personalwebsitephotos.blob.core.windows.net/photos/grad_selfie.jpg",
+        "alt" : "alt text"
+    }
+
+}

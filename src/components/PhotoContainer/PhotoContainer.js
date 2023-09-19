@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../App.css'
 import './PhotoContainer.css'
-const PhotoContainer = () => {
+const PhotoContainer = ({imgSrc}) => {
     return (
         <div className='photo'>
-          <img alt="me in gown" src="https://personalwebsitephotos.blob.core.windows.net/photos/grad_selfie.jpg" />
+          <img className='image' alt="me in gown" src={imgSrc} />
         </div>
     );
   }
