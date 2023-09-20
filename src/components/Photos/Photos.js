@@ -1,11 +1,12 @@
 import React , {useState, useEffect} from 'react';
 import PhotoContainer from '../PhotoContainer/PhotoContainer';
 import './Photos.css';
-import { useMyContext } from '../../utils/context';
+import { useMyContext } from 'utils/context';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
-import images from '../../staticResources/images.json'
+import 'swiper/css/navigation';
+import images from 'staticResources/images.json'
 
 
 
@@ -44,13 +45,19 @@ function Photos() {
         <div className='modal'>
           <div onClick={backdropClicked} className='modal-backdrop'> </div>
           <div className="swiper-container">
-            <button className='exit-button' onClick={backdropClicked}>X</button>
-            <Swiper navigation={true} modules={[Navigation]} className="swiper-element">
+          <button className='exit-button'><img src={require("staticResources/close.png")} alt="close button" onClick={handleClick} /></button>
+              <Swiper initialSlide={imageArr.indexOf(modalImage)}
+                autoHeight={true}
+                navigation={true} 
+                modules={[Navigation, Keyboard]} 
+                className="swiper-element">
+              {imageArr.map((image, index) => (
               <SwiperSlide>
                 <div className='modal-image'>
-                <img alt={modalImage.alt} src={modalImage.src} />
+                <img alt={image.alt} src={image.src} />
                 </div>
               </SwiperSlide>
+            ))}
             </Swiper>
           </div>
         </div> 
