@@ -44,3 +44,13 @@ img {
     transform: rotate(360deg);
   }
 }
+
+.icons-link {
+  position:absolute;
+  width:300px;
+  bottom:1rem;
+  right:25%;
+  left:50%;
+  margin-left:-150px;
+  text-align: center;
+}
