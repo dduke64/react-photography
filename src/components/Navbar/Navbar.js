@@ -1,31 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { Home, Camera, Code, Mail } from "react-feather";
+import { IsMobile } from 'utils/checkMobile';
 import './Navbar.css'
 import {  Link } from "react-router-dom";
 function Navbar() {
 
   const iconSize = 32
 
-  const [windowDimension, setWindowDimension] = useState(null);
-
-  useEffect(() => {
-    setWindowDimension(window.innerWidth);
-  }, []);
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimension(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isMobile = windowDimension <= 640;
-
   return (
     <div>
-    {isMobile ? 
+    {IsMobile() ? 
     (<div className='mobile-navbar'>      
           <Link className='link-item mobile-link' to="/"><Home size={iconSize} /></Link>
 

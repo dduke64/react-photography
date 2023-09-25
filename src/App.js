@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
@@ -12,6 +12,8 @@ import { MyContextProvider } from './utils/context';
 
 
 function App() {
+
+
 
     return (
         <Router>

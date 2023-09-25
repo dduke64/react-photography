@@ -1,12 +1,15 @@
 import React, {useState, useRef} from 'react';
-import { useMyContext } from '../../utils/context';
+import { useMyContext } from 'utils/context';
 import { Home, Camera, Code, Mail, Facebook, Instagram, Linkedin } from "react-feather";
+import { IsMobile } from 'utils/checkMobile';
 
 import emailjs from '@emailjs/browser';
 import './Contact.css'
 
 
 function Contact () {
+  // console.log(isMobile)
+  console.log(IsMobile())
 
   const form = useRef();
 
@@ -33,6 +36,13 @@ function Contact () {
 
     return (
         <div>
+          {IsMobile() === true ? (
+            <div> I am mobile</div>
+          ) : (
+            <div> I am not mobile</div>
+
+          ) 
+          }
           <h2 className='page-header'>{data?.Contact.title}</h2>
             <p className='page-intro'>
             {data?.Contact.intro}
@@ -41,15 +51,15 @@ function Contact () {
             <form ref={form} onSubmit={sendEmail}>
               <div className='form-input'>
               <label>Name:</label>
-              <input className='input' type="text" name="user_name" />
+              <input placeholder='name' className='input' type="text" name="user_name" />
               </div>
               <div className='form-input'>
               <label>Email:</label>
-              <input className='input' type="email" name="user_email" />
+              <input placeholder='example@email.com' className='input' type="email" name="user_email" />
               </div>
               <div className='form-input'>
               <label>Message:</label>
-              <textarea className='input' style={{height: '8rem'}} name="message" />
+              <textarea placeholder='write your message here' className='input' style={{height: '8rem'}} name="message" />
               </div>
               <input type="submit" value="Send" />
             </form>
