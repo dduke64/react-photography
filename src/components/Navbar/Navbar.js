@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Home, Camera, Code, Mail } from "react-feather";
 import { IsMobile } from 'utils/checkMobile';
 import './Navbar.css'

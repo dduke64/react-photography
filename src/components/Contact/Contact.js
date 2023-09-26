@@ -36,13 +36,6 @@ function Contact () {
 
     return (
         <div>
-          {IsMobile() === true ? (
-            <div> I am mobile</div>
-          ) : (
-            <div> I am not mobile</div>
-
-          ) 
-          }
           <h2 className='page-header'>{data?.Contact.title}</h2>
             <p className='page-intro'>
             {data?.Contact.intro}
