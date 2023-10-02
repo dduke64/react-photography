@@ -9,13 +9,6 @@ import 'swiper/css/navigation';
 import images from 'staticResources/images.json'
 
 
-
-// const gradImg = "https://personalwebsitephotos.blob.core.windows.net/photos/grad_selfie.jpg"
-// const img1 = "https://personalwebsitephotos.blob.core.windows.net/photos/pic1.jpeg"
-// const img2 = "https://personalwebsitephotos.blob.core.windows.net/photos/pic2.webp"
-// const img3 = "https://personalwebsitephotos.blob.core.windows.net/photos/pic3.jpeg"
-
-
 function Photos() {
   const { data } = useMyContext();
   const [toggleModal, setToggleModal] = useState(false)
